@@ -24,7 +24,7 @@ public class DemoMain {
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
         // 请求"https://api.solargenomics.com/user/detail"接口
-        String input = "{\"id\":999999}";
+        String input = "{\"id\":1}";
         WebResource.Builder webResource2 = client.resource("https://api.solargenomics.com/user/detail").header("Authorization", "Bearer " + accessToken);
         ClientResponse response2 = webResource2.type("application/json").post(ClientResponse.class, input);
         String output2 = response2.getEntity(String.class);
